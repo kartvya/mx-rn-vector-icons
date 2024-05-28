@@ -1,6 +1,6 @@
 # mx-rn-vector-icons
 
-Welcome to mx-react-native-icons, the ultimate icon library for React Native! Designed to provide developers with a rich set of vector icons, mx-react-native-icons ensures your app looks sleek, modern, and visually appealing. Whether you're building a new project or enhancing an existing one, our library offers a wide array of icons to suit every need.
+Welcome to mx-rn-vector-icons, the ultimate icon library for React Native! Designed to provide developers with a rich set of vector icons, mx-rn-vector-icons ensures your app looks sleek, modern, and visually appealing. Whether you're building a new project or enhancing an existing one, our library offers a wide array of icons to suit every need.
 
 ## Table of Contents
 
@@ -8,10 +8,6 @@ Welcome to mx-react-native-icons, the ultimate icon library for React Native! De
 - [Installation](#installation)
   - [iOS Setup](#ios-setup)
   - [Android Setup](#android-setup)
-
-## Sponsorship
-
-Should you find this library beneficial, kindly contemplate the option of [sponsoring](https://github.com/sponsors/oblador). Our envisioned endeavors encompass the restructuring of the repository into a monorepo architecture. This transition will empower independent versioning of icon sets, enhance performance, reduce bundle size, and simplify community contributions. Your sponsorship plays a pivotal role in materializing these advancements.
 
 ## Bundled Icon Sets
 
