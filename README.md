@@ -2,6 +2,8 @@
 
 Welcome to mx-rn-vector-icons, the ultimate icon library for React Native! Designed to provide developers with a rich set of vector icons, mx-rn-vector-icons ensures your app looks sleek, modern, and visually appealing. Whether you're building a new project or enhancing an existing one, our library offers a wide array of icons to suit every need.
 
+Note: This library is built on top of react-native-vector-icons. To use mx-rn-vector-icons, you need to install react-native-vector-icons as well. Follow the installation steps below to get started:
+
 ## Table of Contents
 
 - [Bundled Icon Sets](#bundled-icon-sets)
@@ -165,57 +167,6 @@ project.ext.vectoricons = [
 To manually integrate the library, follow these steps:
 
 - Copy the contents from the `Fonts` folder and paste them into `android/app/src/main/assets/fonts` (ensure the folder name is lowercase, i.e., `fonts`).
-
-#### Integrating Library for `getImageSource` Support
-
-The following steps are optional and are only necessary if you intend to utilize the `Icon.getImageSource` function.
-
-- Edit the `android/settings.gradle` file as shown below:
-
-  ```diff
-  rootProject.name = 'MyApp'
-
-  include ':app'
-
-  + include ':react-native-vector-icons'
-  + project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
-  ```
-
-- Edit the `android/app/build.gradle` (located in the **app** folder) as shown below:
-
-  ```diff
-  apply plugin: 'com.android.application'
-
-  android {
-    ...
-  }
-
-  dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    //noinspection GradleDynamicVersion
-    implementation "com.facebook.react:react-native:+"  // From node_modules
-
-  + implementation project(':react-native-vector-icons')
-  }
-  ```
-
-- Edit your `MainApplication.java` (located deep within `android/app/src/main/java/...`) as shown below (note that there are `two` places to edit):
-
-  ```diff
-  package com.myapp;
-
-  + import com.oblador.vectoricons.VectorIconsPackage;
-
-  ....
-
-    @Override
-    protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-        new MainReactPackage()
-  +   , new VectorIconsPackage()
-      );
-    }
-  ```
 
 Please note that this optional step is necessary only if your **react-native app doesn't support auto-linking**; otherwise, you can skip this.
 

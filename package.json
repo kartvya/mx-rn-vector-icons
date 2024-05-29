@@ -1,6 +1,6 @@
 {
   "name": "mx-rn-vector-icons",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "Welcome to mx-react-native-icons, the ultimate icon library for React Native! Designed to provide developers with a rich set of vector icons, mx-react-native-icons ensures your app looks sleek, modern, and visually appealing. Whether you're building a new project or enhancing an existing one, our library offers a wide array of icons to suit every need.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -32,7 +32,8 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
     "prepare": "bob build",
-    "release": "release-it"
+    "release": "release-it",
+    "postinstall": "node scripts/postinstall.js"
   },
   "keywords": [
     "react-native",
