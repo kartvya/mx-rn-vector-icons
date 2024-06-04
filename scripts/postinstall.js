@@ -1,14 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
-// Assuming this script is in a folder named 'scripts' inside your package, you need to go up to the project root
-const projectRoot = process.cwd();
+const scriptDir = __dirname;
+const projectRoot = path.dirname(scriptDir);
 
-// Paths to the gradle files
 const settingsGradlePath = path.join(projectRoot, 'android', 'settings.gradle');
 const buildGradlePath = path.join(projectRoot, 'android', 'app', 'build.gradle');
 
-// Lines to append to settings.gradle
 const linesToAddSettingsGradle = `
 include ':react-native-vector-icons'
 project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
@@ -16,7 +14,7 @@ project(':react-native-vector-icons').projectDir = new File(rootProject.projectD
 
 // Line to append to build.gradle
 const lineToAddBuildGradle = 'apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")';
-
+console.log("script is running");
 // Function to append lines if not already present
 const appendIfNotExists = (filePath, lineToAdd) => {
   fs.readFile(filePath, 'utf8', (err, data) => {
